@@ -1,0 +1,9 @@
+<div class="carte">
+
+    <div class="couleur">{{carte.couleur}}</div>
+    <i class="fas fa-heart" *ngIf="carte.couleur==='Coeur'"></i>
+    <i class="fas fa-leaf" *ngIf="carte.couleur==='Pique'"></i>
+    <i class="fas fa-clover" *ngIf="carte.couleur==='Trèfle'"></i>
+    <i class="fas fa-gem" *ngIf="carte.couleur==='Carreaux'"></i>
+    <div class="valeur">{{carte.valeur}}</div>
+</div>
