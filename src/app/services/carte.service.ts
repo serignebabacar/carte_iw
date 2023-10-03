@@ -25,17 +25,6 @@ export class CarteService {
     )
   }
 
-  getMainTriee(): Observable<Carte[]> {
-
-    return this.http.get<Carte[]>(this.backendUrl+"?trier=true").pipe(
-      tap((listesCartes) => this.log(listesCartes)),
-      catchError((error) => {
-        console.log(error);
-        return of([]);
-      })
-    )
-  }
-
   private log(response: Carte[]) {
     console.table(response);
   }
